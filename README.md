@@ -13,13 +13,11 @@ The Luhn Algorithm is a checksum formula used to validate a variety of identific
 
 2. The input credit card number is sanitized to remove any non-digit characters, leaving only the digits for further processing.
 
-3. The program checks if the length of the sanitized credit card number is either 13, 15, or 16 digits, which are common lengths for valid credit card numbers.
+3. The Luhn Algorithm is then applied to the sanitized credit card number. It calculates a checksum by doubling every other digit from the right (starting with the second-to-last digit) and subtracting 9 from the doubled value if it is greater than 9. It then sums up all the resulting digits.
 
-4. The Luhn Algorithm is then applied to the sanitized credit card number. It calculates a checksum by doubling every other digit from the right (starting with the second-to-last digit) and subtracting 9 from the doubled value if it is greater than 9. It then sums up all the resulting digits.
+4. If the checksum obtained in the previous step is divisible by 10 (i.e., the sum % 10 == 0), the credit card number is considered valid. Otherwise, it is deemed invalid.
 
-5. If the checksum obtained in the previous step is divisible by 10 (i.e., the sum % 10 == 0), the credit card number is considered valid. Otherwise, it is deemed invalid.
-
-6. The program provides appropriate feedback to the user, indicating whether the credit card number is valid or if there is an issue with the input length or the Luhn Algorithm validation.
+5. The program provides appropriate feedback to the user, indicating whether the credit card number is valid or if there is an issue with the input length or the Luhn Algorithm validation.
 
 ## Usage
 
@@ -46,10 +44,6 @@ Enter Credit Card Number (or type 'Exit' to quit): 4111 1111 1111 1111
 The credit card number is valid!
 ```
 
-```
-Enter Credit Card Number (or type 'Exit' to quit): 1234567890123456
-Invalid credit card number length.
-```
 
 ## Notes
 

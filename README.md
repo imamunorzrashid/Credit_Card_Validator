@@ -40,7 +40,10 @@ The Luhn Algorithm is a checksum formula used to validate a variety of identific
 ## Sample Output
 
 ```
-Enter Credit Card Number (or type 'Exit' to quit): 4111 1111 1111 1111
+Enter Credit Card Number (or type 'Exit' to quit): 46546546464646
+Invalid credit card number.
+
+Enter Credit Card Number (or type 'Exit' to quit): 79927398713
 The credit card number is valid!
 ```
 
